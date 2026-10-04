@@ -3,6 +3,7 @@ import { Outlet } from 'react-router';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import axios from 'axios';
+import { BASE_URL } from "../utils/constants";
 
 import { useDispatch } from 'react-redux';
 import { addUser } from './utils/userSlice';
@@ -20,7 +21,7 @@ const Body = () => {
   const fetchUser = async () => {
     if (userData) return;
     try {
-      const res = await axios.get("http://localhost:3000/profile/view")
+      const res = await axios.get(BASE_URL + "/profile/view")
       console.log("from body", res)
       dispatch(addUser(res.data));
     } catch (err) {
