@@ -3,7 +3,7 @@ import { Outlet } from 'react-router';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import axios from 'axios';
-import { BASE_URL } from "./utils/constants";
+import { BASE_URL } from "./utils/constant";
 
 import { useDispatch } from 'react-redux';
 import { addUser } from './utils/userSlice';
