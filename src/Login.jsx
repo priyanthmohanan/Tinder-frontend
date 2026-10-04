@@ -33,7 +33,7 @@ const Login = () => {
 
   const handleSignUp = async () => {
     try {
-      const res = await axios.post("http://localhost:3000/signup", {
+      const res = await axios.post(BASE_URL + "/signup", {
         firstName,
         lastName,
         emailID,
