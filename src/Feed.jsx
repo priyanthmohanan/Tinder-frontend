@@ -24,11 +24,12 @@ const Feed = () => {
     getFeed();
   }, []);
 
-  if(!feed) return;
+  if (!feed) return <p className="flex justify-center py-10">Loading...</p>;
 
-  if(feed.length <=0) return <h1 className="flex justify-center py-10"> No new users found</h1>
+  if (feed.length <= 0)
+    return <h1 className="flex justify-center py-10"> No new users found</h1>;
 
-  console.log("Current feed state on render:", feed); 
+  console.log("Current feed state on render:", feed);
 
   return (
     <div className="flex justify-center py-10">
