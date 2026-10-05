@@ -19,7 +19,7 @@ const Navbar = () => {
       dispatch(removeUser());
       navigate('/login');
     } catch (err) {
-      console.error("Logout failed:", err.response?.data || err.message);
+      console.error("Logout failed:", err.response ?.data || err.message);
     }
   }
 
@@ -41,7 +41,7 @@ const Navbar = () => {
                 <div className="w-10 rounded-full">
                   <img
                     alt="User photo"
-                    src={ user.photoUrl || "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" } />
+                    src={user.photoUrl || "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"} />
                 </div>
               </div>
               <ul
@@ -59,14 +59,12 @@ const Navbar = () => {
               </Link>
                 </li>
                 <li>
-                <Link to="/requests" className="justify-between text-base-content hover:bg-base-200 focus:bg-base-200 focus:text-base-content">
-                  Requests
+                  <Link to="/requests" className="justify-between text-base-content hover:bg-base-200 focus:bg-base-200 focus:text-base-content">
+                    Requests
             </Link>
-              </li>
-                <li>
-                  <Link onClick={handleLogout} className="justify-between text-base-content hover:bg-base-200 focus:bg-base-200 focus:text-base-content">
-                    Logout
-              </Link>
+                </li>
+                <li onClick={handleLogout} className="justify-between text-base-content hover:bg-base-200 focus:bg-base-200 focus:text-base-content">
+                  Logout
                 </li>
               </ul>
             </div>
